@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  go-gql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gogql
+    ports:
+      - "8080:8080"
+    working_dir: /app
+    volumes:
+      - .:/app
